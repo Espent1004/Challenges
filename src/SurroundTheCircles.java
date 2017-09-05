@@ -63,6 +63,39 @@ public class SurroundTheCircles {
         return be;
     }
 
+    public ArrayList<String> findTheRectangle(){
+
+        ArrayList<String> rectangle = new ArrayList<String>();
+
+        leftEdge = findLeftEdge();
+        rightEdge = findRightEdge();
+        upperEdge = findUpperEdge();
+        bottomEdge = findBottomEdge();
+
+        StringJoiner upperLeftSj = new StringJoiner(",", "(" , ")");
+        upperLeftSj.add(String.valueOf(leftEdge));
+        upperLeftSj.add(String.valueOf(upperEdge));
+
+        StringJoiner upperRightSj = new StringJoiner(",", "(" , ")");
+        upperRightSj.add(String.valueOf(rightEdge));
+        upperRightSj.add(String.valueOf(upperEdge));
+
+        StringJoiner bottomLeftSj = new StringJoiner(",", "(" , ")");
+        bottomLeftSj.add(String.valueOf(leftEdge));
+        bottomLeftSj.add(String.valueOf(bottomEdge));
+
+        StringJoiner bottomRightSj = new StringJoiner(",", "(" , ")");
+        bottomRightSj.add(String.valueOf(rightEdge));
+        bottomRightSj.add(String.valueOf(bottomEdge));
+
+        rectangle.add(bottomLeftSj.toString());
+        rectangle.add(upperLeftSj.toString());
+        rectangle.add(upperRightSj.toString());
+        rectangle.add(bottomRightSj.toString());
+
+        return rectangle;
+    }
+
 
 
     @Override

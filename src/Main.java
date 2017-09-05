@@ -21,14 +21,11 @@ public class Main {
 
         SurroundTheCircles stc = new SurroundTheCircles(circleArrayList);
 
-        System.out.println(stc.findRightEdge());
-        System.out.println(stc.findLeftEdge());
-        System.out.println(stc.findUpperEdge());
-        System.out.println(stc.findBottomEdge());
 
 
 
-        System.out.println(stc);
+
+        System.out.println(stc.findTheRectangle());
 
     }
 }
